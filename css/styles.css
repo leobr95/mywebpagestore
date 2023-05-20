@@ -76,6 +76,12 @@
   }
 }
 
+.testimoniocard img:hover,  .card svg:hover {
+  transition: 400ms ;
+  transform: translate(-20px, -40px) rotate(-10deg) scale(1.0) ;
+
+}
+
 /* .custom-shape-divider-bottom-1642829853 {
   position: absolute;
   bottom: 0;
@@ -94,7 +100,8 @@
 } */
 
 .custom-shape-divider-bottom-1642829853 .shape-fill {
-  fill: #3fa3e3;
+  fill: #3487ef
+
 }
 
 body {
@@ -7828,13 +7835,14 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  background: rgb(42,134,219);
+  background: radial-gradient(circle, rgba(42,134,219,1) 0%, rgba(57,135,249,1) 100%); 
 }
 
 .bg-secondary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+  background: rgb(58,92,180);
+  background: linear-gradient(96deg, rgba(58,92,180,1) 0%, rgba(29,171,253,1) 55%, rgba(135,35,237,1) 100%); 
+  /* rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important; */
 }
 
 .bg-success {
@@ -11390,13 +11398,13 @@ html {
   color: #fff;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #3fa3e3;
+  color: #2b2b2b;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
   color: #fff;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #3fa3e3;
+  color: #2b2b2b;
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -11418,11 +11426,11 @@ html {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: #3fa3e3;
+    background: #1c1919;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: #3fa3e3;
+    background: #1c1919;
   }
 
   #mainNav.navbar-shrink {
@@ -11460,10 +11468,10 @@ html {
   line-height: 2.75rem;
 }
 .masthead .masthead-subheading {
-  font-size: 1.25rem;
+  font-size: 2.5rem;
 }
 .masthead .masthead-avatar {
-  width: 15rem;
+  width: 18rem;
 }
 
 @media (min-width: 992px) {
@@ -11476,7 +11484,7 @@ html {
     line-height: 3.5rem;
   }
   .masthead .masthead-subheading {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 }
 .portfolio .portfolio-item {
@@ -11493,7 +11501,7 @@ html {
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  background-color: rgba(63, 163, 227, 0.9);
+  background-color: #3487ef
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
@@ -11527,4 +11535,134 @@ html {
 
 .copyright {
   background-color: #1a252f;
+}
+
+/* tarjetas temas */
+:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #fef8f8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  /* margin: 4rem 5vw; */
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #2c3e50;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: grey;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #2c3e50;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}    
+
+.dempresa {
+  margin-top: 50%;
+
+}
+
+.diviconoempresa{
+  transition: all 7s;
+  transform: scale(2.5);
 }
