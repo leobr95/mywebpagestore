@@ -11687,23 +11687,26 @@ box-shadow:  -20px 20px 60px #d9d9d9,
   box-shadow:  -20px 20px 60px #d9d9d9,
                20px -20px 60px #ffffff;
   }
-  .testimoniocard{
-    border-radius: 50px;
-    background: #FFFfff;
-    box-shadow:  -20px 20px 60px #d9d9d9,
-                 20px -20px 60px #ffffff;
-                }
 
-                .perfil {
-                  border-radius: 50px;
-                  background: #3587f0;
-                  box-shadow:  -20px 20px 60px #2d73cc,
-                               20px -20px 60px #3d9bff;
-                }
-                .perfilblanco {
-                  border-radius: 50px;
-                  background: #FFFfff;
-                  box-shadow:  -20px 20px 60px #d9d9d9,
-                               20px -20px 60px #ffffff;
-                
-                }
+ .testimoniocard {
+      border-radius: 50px;
+      background: #FFFfff;
+      box-shadow: -20px 20px 60px #d9d9d9,
+        20px -20px 60px #ffffff;
+}
+  
+    .perfil {
+      border-radius: 50px;
+      background: #3587f0;
+      box-shadow: -20px 20px 60px #2d73cc,
+        20px -20px 60px #3d9bff;
+    }
+  
+    .perfilblanco {
+      border-radius: 50px;
+      background: #FFFfff;
+      box-shadow: -20px 20px 60px #d9d9d9,
+        20px -20px 60px #ffffff;
+  
+    }
+    
